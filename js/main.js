@@ -47,33 +47,6 @@
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 })();
 
-// ============ スクリーンショットカルーセルのドット ============
-(function () {
-  const carousel = document.getElementById("carousel");
-  const dotsBox = document.getElementById("carousel-dots");
-  if (!carousel || !dotsBox) return;
-  const imgs = [...carousel.querySelectorAll("img")];
-  imgs.forEach((img, i) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.setAttribute("aria-label", `スクリーンショット${i + 1}枚目`);
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-      carousel.scrollTo({ left: img.offsetLeft - carousel.offsetLeft, behavior: "smooth" });
-    });
-    dotsBox.appendChild(dot);
-  });
-  const dots = [...dotsBox.children];
-  carousel.addEventListener(
-    "scroll",
-    () => {
-      const idx = Math.round(carousel.scrollLeft / (carousel.scrollWidth / imgs.length));
-      dots.forEach((d, i) => d.classList.toggle("active", i === Math.min(idx, imgs.length - 1)));
-    },
-    { passive: true }
-  );
-})();
-
 // ============ メールアドレス表示(スクレイピング対策でJS組み立て) ============
 (function () {
   const btn = document.getElementById("email-reveal");
