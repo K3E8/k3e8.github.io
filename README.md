@@ -18,7 +18,7 @@
 
 - **アプリを追加**: 「つくったもの」の `.app-card` をコピーして編集。PICKUPに載せるなら `.pickup-card` を複製
 - **お知らせを追加**: `.news-list` の先頭に `<li><time datetime="YYYY-MM-DD">YYYY.MM.DD</time><p>本文</p></li>` を追加
-- **スクリーンショット差し替え**: `assets/img/noratalk/ss01〜05.png`(幅828pxに縮小済み)
+- **PICKUPの動くデモ**: HTML/CSSのみで実装(index.htmlの `.phone-demo` + style.cssの「チャット画面デモ」)。会話内容はHTMLの吹き出しテキストを編集、タイミングはCSSの `pd-m1〜m4` キーフレームで調整。実録画に差し替える場合は `.phone-demo` を `<video autoplay muted loop playsinline>` に置き換え
 
 ## 機能メモ
 
