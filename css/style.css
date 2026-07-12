@@ -1,0 +1,251 @@
+/* ============ テーマ変数 ============ */
+:root {
+  color-scheme: light dark;
+  --bg: #f6f8fb;
+  --bg-soft: #eef2f7;
+  --card: #ffffff;
+  --card-border: rgba(20, 40, 70, 0.08);
+  --text: #17202e;
+  --text-sub: #5a6778;
+  --accent-1: #3ec46d;
+  --accent-2: #3b9ae8;
+  --accent-text: #2e8bd6;
+  --shadow: 0 10px 30px rgba(20, 40, 70, 0.08);
+  --header-bg: rgba(246, 248, 251, 0.82);
+}
+[data-theme="dark"] {
+  --bg: #0c1220;
+  --bg-soft: #101828;
+  --card: #141d2e;
+  --card-border: rgba(255, 255, 255, 0.07);
+  --text: #e9eef6;
+  --text-sub: #93a0b4;
+  --accent-text: #6db9f2;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --header-bg: rgba(12, 18, 32, 0.82);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1220;
+    --bg-soft: #101828;
+    --card: #141d2e;
+    --card-border: rgba(255, 255, 255, 0.07);
+    --text: #e9eef6;
+    --text-sub: #93a0b4;
+    --accent-text: #6db9f2;
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    --header-bg: rgba(12, 18, 32, 0.82);
+  }
+}
+
+/* ============ ベース ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+.accent {
+  background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============ ヘッダー ============ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
+.header-inner {
+  max-width: 1080px; margin: 0 auto; padding: 0.7rem 1.2rem;
+  display: flex; align-items: center; gap: 1.4rem;
+}
+.logo { font-weight: 800; font-size: 1.15rem; letter-spacing: 0.02em; }
+.global-nav { display: flex; gap: 1.1rem; font-size: 0.92rem; font-weight: 600; }
+.global-nav a { color: var(--text-sub); padding: 0.2rem 0.1rem; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.global-nav a:hover, .global-nav a.active { color: var(--text); border-bottom-color: var(--accent-2); }
+.header-actions { margin-left: auto; display: flex; align-items: center; gap: 0.4rem; }
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 10px;
+  border: 1px solid transparent; background: none; color: var(--text-sub);
+  cursor: pointer; transition: background 0.2s, color 0.2s;
+}
+.icon-btn:hover { background: var(--bg-soft); color: var(--text); }
+.theme-icon::before { content: "◐"; font-size: 1.15rem; line-height: 1; }
+
+/* ============ ヒーロー ============ */
+.hero { max-width: 860px; margin: 0 auto; padding: 5.5rem 1.2rem 3rem; text-align: center; }
+.hero h1 { font-size: clamp(1.7rem, 5vw, 2.7rem); font-weight: 800; line-height: 1.5; letter-spacing: 0.02em; }
+.hero-sub { margin-top: 1.2rem; color: var(--text-sub); font-size: 0.98rem; }
+.intro-card {
+  margin-top: 2.5rem; padding: 1.4rem 1.6rem; text-align: left;
+  background: var(--card); border: 1px solid var(--card-border);
+  border-radius: 16px; box-shadow: var(--shadow); color: var(--text-sub); font-size: 0.95rem;
+}
+
+/* ============ セクション共通 ============ */
+.section { max-width: 1080px; margin: 0 auto; padding: 3.2rem 1.2rem; }
+.section-label {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent-text);
+}
+.section-title { font-size: 1.5rem; font-weight: 800; margin-top: 0.2rem; }
+.section-title::after {
+  content: ""; display: block; width: 48px; height: 3px; margin-top: 0.6rem;
+  border-radius: 2px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+}
+
+/* ============ PICKUPカード ============ */
+.pickup-card {
+  margin-top: 1.8rem; display: grid; grid-template-columns: minmax(240px, 340px) 1fr; gap: 2.2rem;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
+  padding: 2rem; box-shadow: var(--shadow);
+}
+.carousel {
+  display: flex; gap: 0.8rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  border-radius: 14px; scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel img {
+  scroll-snap-align: center; flex: 0 0 100%;
+  border-radius: 14px; border: 1px solid var(--card-border);
+}
+.carousel-dots { display: flex; justify-content: center; gap: 0.45rem; margin-top: 0.8rem; }
+.carousel-dots button {
+  width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0;
+  background: var(--card-border); cursor: pointer; transition: background 0.2s, transform 0.2s;
+}
+.carousel-dots button.active { background: var(--accent-2); transform: scale(1.3); }
+
+.app-title-row { display: flex; align-items: center; gap: 0.9rem; }
+.app-icon { border-radius: 22%; box-shadow: 0 4px 14px rgba(20, 40, 70, 0.18); }
+.app-name { font-size: 1.35rem; font-weight: 800; }
+.app-genre { font-size: 0.8rem; font-weight: 700; color: var(--accent-text); letter-spacing: 0.06em; }
+.app-tagline { margin-top: 1.3rem; font-size: 1.12rem; font-weight: 700; line-height: 1.7; }
+.app-desc { margin-top: 0.8rem; color: var(--text-sub); font-size: 0.95rem; }
+.feature-chips { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; }
+.feature-chips li {
+  font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 999px;
+  background: var(--bg-soft); border: 1px solid var(--card-border); color: var(--text-sub);
+}
+
+.store-row { margin-top: 1.5rem; display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.store-btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: #000; color: #fff; border-radius: 12px; padding: 0.55rem 1.1rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+[data-theme="dark"] .store-btn { background: #fff; color: #000; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .store-btn { background: #fff; color: #000; }
+}
+.store-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.store-btn small { display: block; font-size: 0.62rem; line-height: 1.2; }
+.store-btn strong { display: block; font-size: 1.05rem; line-height: 1.2; }
+
+.qr-details summary {
+  cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--accent-text);
+  list-style: none;
+}
+.qr-details summary::-webkit-details-marker { display: none; }
+.qr-details summary::before { content: "▸ "; }
+.qr-details[open] summary::before { content: "▾ "; }
+.qr-pop {
+  margin-top: 0.7rem; padding: 0.9rem; display: flex; align-items: center; gap: 0.9rem;
+  background: var(--bg-soft); border: 1px solid var(--card-border); border-radius: 12px;
+}
+.qr-pop img { border-radius: 8px; background: #fff; padding: 4px; }
+.qr-pop p { font-size: 0.78rem; color: var(--text-sub); line-height: 1.6; }
+.android-note { margin-top: 1rem; font-size: 0.82rem; color: var(--text-sub); }
+.android-note::before { content: "🤖 "; }
+
+/* ============ APPSグリッド ============ */
+.app-grid { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
+.app-card {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+  padding: 1.2rem 1.3rem; box-shadow: var(--shadow);
+  transition: transform 0.18s, border-color 0.18s;
+}
+.app-card:hover { transform: translateY(-3px); border-color: var(--accent-2); }
+.app-card h3 { font-size: 1.02rem; font-weight: 800; }
+.app-card p { font-size: 0.85rem; color: var(--text-sub); margin: 0.2rem 0 0.4rem; }
+.app-card .app-genre { font-size: 0.72rem; }
+.app-card--soon { border-style: dashed; box-shadow: none; }
+.app-card--soon:hover { transform: none; border-color: var(--card-border); }
+.soon-icon {
+  flex: 0 0 56px; height: 56px; border-radius: 14px; display: grid; place-items: center;
+  background: var(--bg-soft); border: 1px dashed var(--card-border);
+  font-size: 1.4rem; font-weight: 800; color: var(--text-sub);
+}
+
+/* ============ NEWS ============ */
+.news-list { margin-top: 1.6rem; list-style: none; border-top: 1px solid var(--card-border); }
+.news-list li {
+  display: flex; gap: 1.6rem; padding: 1rem 0.3rem;
+  border-bottom: 1px solid var(--card-border); font-size: 0.93rem;
+}
+.news-list time { flex: 0 0 6.2em; color: var(--text-sub); font-weight: 600; font-variant-numeric: tabular-nums; }
+.news-list a { color: var(--accent-text); }
+.news-list a:hover { text-decoration: underline; }
+
+/* ============ CONTACT ============ */
+.contact-lead { margin-top: 1.2rem; color: var(--text-sub); font-size: 0.95rem; }
+.contact-grid { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.1rem; }
+.contact-card {
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+  padding: 1.3rem 1.4rem; box-shadow: var(--shadow); transition: transform 0.18s, border-color 0.18s;
+}
+a.contact-card:hover { transform: translateY(-3px); border-color: var(--accent-2); }
+.contact-card h3 {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent-text);
+}
+.contact-value { margin-top: 0.4rem; font-weight: 700; }
+.contact-note { margin-top: 0.3rem; font-size: 0.82rem; color: var(--text-sub); }
+.text-btn {
+  margin-top: 0.4rem; background: none; border: none; padding: 0;
+  font: inherit; font-weight: 700; color: var(--accent-text); cursor: pointer;
+}
+.text-btn:hover { text-decoration: underline; }
+
+/* ============ フッター他 ============ */
+.site-footer {
+  margin-top: 2rem; padding: 2.2rem 1.2rem; text-align: center;
+  color: var(--text-sub); font-size: 0.82rem; border-top: 1px solid var(--card-border);
+}
+.to-top {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; width: 44px; height: 44px;
+  border-radius: 50%; border: 1px solid var(--card-border);
+  background: var(--card); color: var(--text); box-shadow: var(--shadow);
+  font-size: 1.1rem; cursor: pointer; opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s; transform: translateY(8px);
+}
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+/* ============ スクロール出現 ============ */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ============ レスポンシブ ============ */
+@media (max-width: 760px) {
+  .pickup-card { grid-template-columns: 1fr; padding: 1.3rem; }
+  .carousel img { flex: 0 0 78%; }
+  .hero { padding-top: 3.5rem; }
+  .global-nav { gap: 0.8rem; font-size: 0.86rem; }
+  .header-inner { gap: 0.9rem; }
+}
