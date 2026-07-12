@@ -22,7 +22,8 @@
   <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233ec46d'/%3E%3Cstop offset='1' stop-color='%233b9ae8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial' font-weight='bold' font-size='34' fill='white' text-anchor='middle'%3EK3%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- ?v= はキャッシュ対策のバージョン。CSS/JSを変更したら数字を上げる -->
+  <link rel="stylesheet" href="css/style.css?v=3">
 
   <script type="application/ld+json">
   {
@@ -81,7 +82,8 @@
     <p class="section-label">Pickup</p>
     <h2 class="section-title">アプリ紹介</h2>
 
-    <article class="pickup-card reveal">
+    <div class="pickup-track reveal" id="pickup-track">
+    <article class="pickup-card" data-href="https://apps.apple.com/jp/app/id6766537702" title="App Storeで野良トークを見る">
       <div class="pickup-media">
         <div class="phone-demo" role="img" aria-label="野良トークのチャット画面: 知らない誰かとゆるく雑談しているデモ">
           <div class="pd-status"><span>9:41</span><span>●●● 5G</span></div>
@@ -140,6 +142,16 @@
         <p class="android-note">Android版は現在準備中です</p>
       </div>
     </article>
+
+    <article class="pickup-card pickup-card--soon" aria-label="開発中の次のアプリ">
+      <div class="pickup-soon">
+        <div class="soon-icon" aria-hidden="true">?</div>
+        <h3>NEXT APP</h3>
+        <p>次のアプリを開発中です。<br>続報は <a href="https://x.com/noratalk_app" target="_blank" rel="noopener">X (@noratalk_app)</a> でお知らせします。</p>
+      </div>
+    </article>
+    </div><!-- /.pickup-track -->
+    <div class="pickup-dots" id="pickup-dots" role="tablist" aria-label="アプリ紹介の切り替え"></div>
   </section>
 
   <!-- ============ APPS ============ -->
@@ -210,6 +222,6 @@
 
 <button id="to-top" class="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
 
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=7" defer></script>
 </body>
 </html>
