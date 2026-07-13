@@ -6,7 +6,6 @@
   <title>K3E8 Apps | 個人開発のアプリ置き場</title>
   <meta name="description" content="K3E8(ケイ)の個人開発アプリ紹介サイト。匿名チャットアプリ「野良トーク」を配信中。企画からデザイン、実装、運営までひとりで作っています。">
 
-  <!-- ▼ 公開時: ドメインが決まったら k3e8.github.io を実際のものに置換 -->
   <link rel="canonical" href="https://k3e8.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="K3E8 Apps | 個人開発のアプリ置き場">
@@ -23,7 +22,7 @@
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233ec46d'/%3E%3Cstop offset='1' stop-color='%233b9ae8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial' font-weight='bold' font-size='34' fill='white' text-anchor='middle'%3EK3%3C/text%3E%3C/svg%3E">
   <!-- ?v= はキャッシュ対策のバージョン。CSS/JSを変更したら数字を上げる -->
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 
   <script type="application/ld+json">
   {
@@ -49,9 +48,9 @@
   <div class="header-inner">
     <a class="logo" href="#top">K3E8 <span class="accent">Apps</span></a>
     <nav class="global-nav" aria-label="メイン">
-      <a href="#apps" data-spy="apps">Apps</a>
-      <a href="#news" data-spy="news">News</a>
-      <a href="#contact" data-spy="contact">Contact</a>
+      <a href="#apps" data-spy="apps">アプリ</a>
+      <a href="#news" data-spy="news">お知らせ</a>
+      <a href="#contact" data-spy="contact">連絡先</a>
     </nav>
     <div class="header-actions">
       <button id="theme-toggle" class="icon-btn" type="button" aria-label="テーマ切替" title="ライト/ダーク切替">
@@ -68,164 +67,142 @@
 </header>
 
 <main>
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <h1>ひとりの時間に、<br>ちょっとした<span class="accent">つながり</span>を</h1>
-    <p class="hero-sub">個人でiOS / Androidアプリを開発しています。<br>気になるアプリがあれば、ぜひ使ってみてください。</p>
-    <div class="intro-card reveal">
-      <p>企画からデザイン、実装、運営までぜんぶひとり。「こういうのが欲しかった」を自分の手で形にして、ストアに並べています。まずは第一作、匿名チャットアプリ「野良トーク」から。</p>
-    </div>
-  </section>
-
-  <!-- ============ PICKUP ============ -->
-  <section class="section" id="apps">
-    <p class="section-label">Pickup</p>
-    <h2 class="section-title">アプリ紹介</h2>
-
-    <div class="pickup-track reveal" id="pickup-track">
-    <article class="pickup-card" data-href="https://apps.apple.com/jp/app/id6766537702" title="App Storeで野良トークを見る">
-      <div class="pickup-media">
-        <div class="phone-demo" role="img" aria-label="野良トークのチャット画面: 知らない誰かとゆるく雑談しているデモ">
-          <div class="pd-status"><span>9:41</span><span>●●● 5G</span></div>
-          <div class="pd-header">
-            <span class="pd-avatar">み</span>
-            <span class="pd-name">みずき</span>
-            <span class="pd-online">● オンライン</span>
-          </div>
-          <div class="pd-chat">
-            <div class="pd-msg pd-in pd-m1"><p>こんばんは🌙</p></div>
-            <div class="pd-msg pd-out pd-m2"><p>こんばんは!</p></div>
-            <div class="pd-slot">
-              <div class="pd-msg pd-in pd-typing" aria-hidden="true"><p><i></i><i></i><i></i></p></div>
-              <div class="pd-msg pd-in pd-m3"><p>まだ起きてる人いた〜</p></div>
-            </div>
-            <div class="pd-msg pd-out pd-m4"><p>夜は長いですからね</p></div>
-          </div>
-          <div class="pd-input">メッセージを入力…</div>
+  <!-- ============ ヒーロー: 野良トーク ============ -->
+  <section class="hero-app">
+    <div class="hero-copy">
+      <div class="hero-brand">
+        <img class="app-icon" src="assets/img/noratalk/icon-512.png" width="56" height="56" alt="野良トークのアイコン">
+        <div>
+          <p class="hero-appname">野良トーク</p>
+          <p class="hero-genre">匿名チャットアプリ</p>
         </div>
       </div>
+      <h1>誰かに話しかけたいけど、<br><span class="accent">知り合いに送るほどではない。</span></h1>
+      <p class="hero-desc">
+        そんなときのための匿名チャットアプリ。プロフィールとタグで気分の合う相手を見つけて、名前も知らない誰かとゆるく雑談。SNSほど重くない、その場かぎりの心地いい距離感を大切にしています。
+      </p>
+      <ul class="feature-chips" aria-label="特徴">
+        <li>登録は電話番号だけ</li>
+        <li>タグで相手を探せる</li>
+        <li>通報・ブロックで安心</li>
+        <li>基本無料</li>
+      </ul>
+      <div class="store-row">
+        <a class="store-btn" href="https://apps.apple.com/jp/app/id6766537702" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.03-2.89 2.36-4.28 2.47-4.35-1.35-1.97-3.44-2.24-4.18-2.27-1.78-.18-3.47 1.05-4.37 1.05-.9 0-2.29-1.02-3.77-1-1.94.03-3.72 1.13-4.72 2.86-2.01 3.49-.51 8.66 1.45 11.49.96 1.39 2.1 2.94 3.6 2.88 1.45-.06 2-.93 3.74-.93 1.75 0 2.24.93 3.77.9 1.56-.03 2.55-1.41 3.5-2.8 1.1-1.61 1.56-3.17 1.58-3.25-.03-.02-3.03-1.16-3.07-4.58ZM14.18 4.06c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.38 1.74-.74.85-1.39 2.23-1.22 3.54 1.29.1 2.6-.65 3.41-1.62Z"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a class="x-btn" href="https://x.com/noratalk_app" target="_blank" rel="noopener" title="野良トーク公式Xを開く">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3L17.6 20.65Z"/></svg>
+          <span>公式X</span>
+        </a>
+        <details class="qr-details">
+          <summary>QRコードで開く</summary>
+          <div class="qr-pop">
+            <img src="assets/img/noratalk/qr-ios.png" width="120" height="120" alt="App StoreへのQRコード">
+            <p>スマホのカメラで読み取ると<br>App Storeが開きます</p>
+          </div>
+        </details>
+      </div>
+      <p class="android-note">Android版は現在準備中です</p>
+    </div>
 
-      <div class="pickup-body">
-        <div class="app-title-row">
-          <img class="app-icon" src="assets/img/noratalk/icon-512.png" width="72" height="72" alt="野良トークのアイコン">
+    <a class="hero-media" href="https://apps.apple.com/jp/app/id6766537702" target="_blank" rel="noopener" aria-label="App Storeで野良トークを見る">
+      <div class="phone-demo" role="img" aria-label="野良トークのチャット画面: 知らない誰かとゆるく雑談しているデモ">
+        <div class="pd-status"><span>9:41</span><span>●●● 5G</span></div>
+        <div class="pd-header">
+          <span class="pd-avatar">み</span>
+          <span class="pd-name">みずき</span>
+          <span class="pd-online">● オンライン</span>
+        </div>
+        <div class="pd-chat">
+          <div class="pd-msg pd-in pd-m1"><p>こんばんは🌙</p></div>
+          <div class="pd-msg pd-out pd-m2"><p>こんばんは!</p></div>
+          <div class="pd-slot">
+            <div class="pd-msg pd-in pd-typing" aria-hidden="true"><p><i></i><i></i><i></i></p></div>
+            <div class="pd-msg pd-in pd-m3"><p>まだ起きてる人いた〜</p></div>
+          </div>
+          <div class="pd-msg pd-out pd-m4"><p>夜は長いですからね</p></div>
+        </div>
+        <div class="pd-input">メッセージを入力…</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ============ つくったもの ============ -->
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C180,52 360,6 540,20 C720,34 900,54 1080,40 C1260,26 1350,10 1440,24 L1440,56 L0,56 Z"/></svg>
+  </div>
+  <div class="band">
+    <section class="section" id="apps">
+      <h2 class="section-title">つくったもの</h2>
+      <p class="section-sub">企画からデザイン、実装、運営までぜんぶひとり。「こういうのが欲しかった」を形にして、ストアに並べています。</p>
+      <div class="app-grid">
+        <a class="app-card reveal" href="https://apps.apple.com/jp/app/id6766537702" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/img/noratalk/icon-512.png" width="56" height="56" alt="" loading="lazy">
           <div>
-            <h3 class="app-name">野良トーク</h3>
-            <p class="app-genre">Anonymous Chat</p>
+            <h3>野良トーク</h3>
+            <p>知らない誰かと、ゆるく雑談できる匿名チャット</p>
+            <span class="app-genre">Anonymous Chat</span>
+          </div>
+        </a>
+        <div class="app-card app-card--soon reveal" aria-label="開発中のアプリ">
+          <div class="soon-icon" aria-hidden="true">?</div>
+          <div>
+            <h3>NEXT APP</h3>
+            <p>次のアプリを開発中。続報は <a href="https://x.com/K3E8_dev" target="_blank" rel="noopener">X</a> でお知らせします</p>
+            <span class="app-genre">Coming Soon</span>
           </div>
         </div>
-
-        <p class="app-tagline">誰かに話しかけたいけど、<br>知り合いに送るほどではない。</p>
-        <p class="app-desc">
-          そんなときのための、匿名チャットアプリ。プロフィールとタグで気分の合う相手を見つけて、名前も知らない誰かとゆるく雑談。SNSほど重くない、その場かぎりの心地いい距離感を大切にしています。
-        </p>
-
-        <ul class="feature-chips" aria-label="特徴">
-          <li>登録は電話番号だけ</li>
-          <li>タグで相手を探せる</li>
-          <li>通報・ブロックで安心</li>
-          <li>基本無料</li>
-        </ul>
-
-        <div class="store-row">
-          <a class="store-btn" href="https://apps.apple.com/jp/app/id6766537702" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.03-2.89 2.36-4.28 2.47-4.35-1.35-1.97-3.44-2.24-4.18-2.27-1.78-.18-3.47 1.05-4.37 1.05-.9 0-2.29-1.02-3.77-1-1.94.03-3.72 1.13-4.72 2.86-2.01 3.49-.51 8.66 1.45 11.49.96 1.39 2.1 2.94 3.6 2.88 1.45-.06 2-.93 3.74-.93 1.75 0 2.24.93 3.77.9 1.56-.03 2.55-1.41 3.5-2.8 1.1-1.61 1.56-3.17 1.58-3.25-.03-.02-3.03-1.16-3.07-4.58ZM14.18 4.06c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.38 1.74-.74.85-1.39 2.23-1.22 3.54 1.29.1 2.6-.65 3.41-1.62Z"/></svg>
-            <span><small>Download on the</small><strong>App Store</strong></span>
-          </a>
-          <a class="x-btn" href="https://x.com/noratalk_app" target="_blank" rel="noopener" title="野良トーク公式Xを開く">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3L17.6 20.65Z"/></svg>
-            <span>公式X</span>
-          </a>
-          <details class="qr-details">
-            <summary>QRコードで開く</summary>
-            <div class="qr-pop">
-              <img src="assets/img/noratalk/qr-ios.png" width="120" height="120" alt="App StoreへのQRコード">
-              <p>スマホのカメラで読み取ると<br>App Storeが開きます</p>
-            </div>
-          </details>
-        </div>
-        <p class="android-note">Android版は現在準備中です</p>
       </div>
-    </article>
+    </section>
+  </div>
+  <div class="wave wave--flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C180,52 360,6 540,20 C720,34 900,54 1080,40 C1260,26 1350,10 1440,24 L1440,56 L0,56 Z"/></svg>
+  </div>
 
-    <article class="pickup-card pickup-card--soon" aria-label="開発中の次のアプリ">
-      <div class="pickup-soon">
-        <div class="soon-icon" aria-hidden="true">?</div>
-        <h3>NEXT APP</h3>
-        <p>次のアプリを開発中です。<br>続報は <a href="https://x.com/K3E8_dev" target="_blank" rel="noopener">X</a> でお知らせします。</p>
-      </div>
-    </article>
-    </div><!-- /.pickup-track -->
-    <div class="pickup-dots" id="pickup-dots" role="tablist" aria-label="アプリ紹介の切り替え"></div>
-  </section>
-
-  <!-- ============ APPS ============ -->
-  <section class="section">
-    <p class="section-label">Apps</p>
-    <h2 class="section-title">つくったもの</h2>
-    <div class="app-grid">
-      <a class="app-card reveal" href="https://apps.apple.com/jp/app/id6766537702" target="_blank" rel="noopener">
-        <img class="app-icon" src="assets/img/noratalk/icon-512.png" width="56" height="56" alt="" loading="lazy">
-        <div>
-          <h3>野良トーク</h3>
-          <p>知らない誰かと、ゆるく雑談できる匿名チャット</p>
-          <span class="app-genre">Anonymous Chat</span>
-        </div>
-      </a>
-      <div class="app-card app-card--soon reveal" aria-label="開発中のアプリ">
-        <div class="soon-icon" aria-hidden="true">?</div>
-        <div>
-          <h3>NEXT APP</h3>
-          <p>次のアプリを開発中。続報はXでお知らせします</p>
-          <span class="app-genre">Coming Soon</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NEWS ============ -->
+  <!-- ============ お知らせ ============ -->
   <section class="section" id="news">
-    <p class="section-label">News</p>
     <h2 class="section-title">お知らせ</h2>
-    <ul class="news-list reveal">
+    <ol class="timeline reveal">
       <li><time datetime="2026-07-04">2026.07.04</time><p>野良トーク v1.0.4 を公開しました</p></li>
       <li><time datetime="2026-06-17">2026.06.17</time><p>野良トーク公式X(<a href="https://x.com/noratalk_app" target="_blank" rel="noopener">@noratalk_app</a>)を開設しました</p></li>
       <li><time datetime="2026-06-09">2026.06.09</time><p>野良トーク iOS版を App Store でリリースしました</p></li>
-    </ul>
+    </ol>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">お問い合わせ</h2>
-    <p class="contact-lead">アプリに関するお問い合わせや、お仕事のご依頼はお気軽にどうぞ。</p>
-    <div class="contact-grid">
-      <div class="contact-card reveal">
-        <h3>Email</h3>
+  <!-- ============ 連絡先 ============ -->
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C180,52 360,6 540,20 C720,34 900,54 1080,40 C1260,26 1350,10 1440,24 L1440,56 L0,56 Z"/></svg>
+  </div>
+  <div class="band band--footer">
+    <section class="section" id="contact">
+      <h2 class="section-title">連絡先</h2>
+      <p class="contact-lead">アプリに関するお問い合わせや、お仕事のご依頼はお気軽にどうぞ。</p>
+      <div class="contact-links reveal">
         <!-- アドレスはJSで組み立て(ボットのスクレイピング対策) -->
-        <button id="email-reveal" class="text-btn" type="button"
-                data-u="s299792458star" data-d="gmail.com">メールアドレスを表示</button>
-        <p class="contact-note">お問い合わせ・お仕事のご依頼</p>
+        <button id="email-reveal" class="contact-pill" type="button" data-u="s299792458star" data-d="gmail.com">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span>メールアドレスを表示</span>
+        </button>
+        <a class="contact-pill" href="https://x.com/K3E8_dev" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3L17.6 20.65Z"/></svg>
+          <span>@K3E8_dev</span>
+        </a>
+        <a class="contact-pill" href="https://github.com/K3E8" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.91c.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.2.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          <span>K3E8</span>
+        </a>
       </div>
-      <a class="contact-card reveal" href="https://x.com/K3E8_dev" target="_blank" rel="noopener">
-        <h3>X (Twitter)</h3>
-        <p class="contact-value">@K3E8_dev</p>
-        <p class="contact-note">開発者本人のアカウント。開発の近況はこちら</p>
-      </a>
-      <a class="contact-card reveal" href="https://github.com/K3E8" target="_blank" rel="noopener">
-        <h3>GitHub</h3>
-        <p class="contact-value">K3E8</p>
-        <p class="contact-note">ソースコード・法務ページ</p>
-      </a>
-    </div>
-  </section>
+    </section>
+    <footer class="site-footer">
+      <p>© 2026 K3E8</p>
+    </footer>
+  </div>
 </main>
-
-<footer class="site-footer">
-  <p>© 2026 K3E8</p>
-</footer>
 
 <button id="to-top" class="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
 
-<script src="js/main.js?v=7" defer></script>
+<script src="js/main.js?v=8" defer></script>
 </body>
 </html>
