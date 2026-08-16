@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>プライバシーポリシー | ロック画面メジャー</title>
-  <meta name="description" content="ロック画面メジャーのプライバシーポリシー。本アプリは利用者のデータを一切収集・送信しません。">
+  <meta name="description" content="ロック画面メジャーのプライバシーポリシー。本アプリは計測データを開発者のサーバーへ送信しません。">
   <link rel="canonical" href="https://k3e8.github.io/locklens/privacy.html">
   <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
@@ -16,8 +16,9 @@
     .policy h2 { font-size: 1.1rem; margin: 1.8em 0 0.5em; }
     .policy ul { padding-left: 1.3em; }
     .policy li { margin: 0.4em 0; }
-    .policy .updated { margin-top: 3em; font-size: 0.85rem; opacity: 0.6; }
-    .policy a.back { display: inline-block; margin-top: 2.5em; }
+    .policy a { text-decoration: underline; text-underline-offset: 2px; }
+    .policy .updated { margin-top: 3em; font-size: 0.85rem; opacity: 0.8; }
+    .policy a.back { display: inline-block; margin-top: 2.5em; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -25,26 +26,38 @@
     <h1>プライバシーポリシー</h1>
     <p class="app-name">ロック画面メジャー(iOSアプリ)</p>
 
-    <p>本アプリは、利用者の個人情報およびいかなるデータも収集・送信しません。</p>
+    <p>本アプリは、計測結果・写真・診断情報などの利用者データを開発者のサーバーへ送信しません。開発者が利用者の個人情報を収集することはありません。</p>
 
     <h2>データの取り扱い</h2>
     <ul>
-      <li>計測結果と写真は、すべてお使いの端末内にのみ保存されます</li>
-      <li>外部サーバーへの通信は行いません</li>
+      <li>計測結果、寸法入り写真、診断データ、設定は、アプリの保存領域(お使いの端末内)で扱います</li>
       <li>アカウント登録は不要です</li>
       <li>広告や解析のためのSDKは含まれていません</li>
+      <li>写真ライブラリへの追加は、利用者が保存操作をしたときにのみ行います</li>
+      <li>写真ライブラリに保存された写真は、お使いのiCloud写真の設定に従ってAppleのiCloudに同期される場合があります(開発者がその内容を取得することはありません)</li>
+      <li>共有機能で計測結果や写真を送信した場合、送信先のサービスにはそのサービスの規約・ポリシーが適用されます</li>
+    </ul>
+
+    <h2>データの保存期間と削除</h2>
+    <ul>
+      <li>アプリ内の計測履歴は、利用者が削除するまで端末内に保存されます。履歴の詳細画面からいつでも削除できます</li>
+      <li>写真ライブラリに保存した写真は、iOSの「写真」アプリから削除できます(アプリ内履歴の削除とは別です)</li>
+      <li>アプリを削除すると、アプリ内に保存されたデータ(履歴・設定・診断データ)はすべて削除されます</li>
+      <li>開発者のサーバーには利用者のデータが存在しないため、開発者側で削除すべきデータはありません</li>
     </ul>
 
     <h2>権限について</h2>
     <ul>
       <li><strong>カメラ</strong>: 採寸のためのAR表示に使用します</li>
       <li><strong>写真ライブラリ(追加のみ)</strong>: 利用者が保存操作をしたときに、寸法入り写真を追加するためだけに使用します。既存の写真の読み取りは行いません</li>
+      <li>これらの権限は、iOSの「設定」アプリ(設定 → アプリ → ロック画面メジャー)からいつでも変更・撤回できます</li>
     </ul>
 
     <h2>お問い合わせ</h2>
     <p>メール: <a href="mailto:k3e8.apps@gmail.com">k3e8.apps@gmail.com</a></p>
+    <p><a href="support.html">サポートページ</a>もご利用いただけます。</p>
 
-    <p class="updated">最終更新: 2026年8月</p>
+    <p class="updated">最終更新: 2026年8月16日</p>
     <a class="back" href="../">← K3E8 Apps トップへ</a>
   </main>
 </body>
