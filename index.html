@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K3E8 Apps | 個人開発のアプリ置き場</title>
-  <meta name="description" content="K3E8(ケイ)の個人開発アプリ紹介サイト。匿名チャットアプリ「野良トーク」を配信中。企画からデザイン、実装、運営までひとりで作っています。">
+  <meta name="description" content="K3E8(ケイ)の個人開発アプリ紹介サイト。匿名チャットアプリ「野良トーク」を配信中、ARメジャー「ロック画面メジャー」も近日公開。企画からデザイン、実装、運営までひとりで作っています。">
 
   <link rel="canonical" href="https://k3e8.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="K3E8 Apps | 個人開発のアプリ置き場">
-  <meta property="og:description" content="匿名チャットアプリ「野良トーク」を配信中。個人開発アプリの紹介サイトです。">
+  <meta property="og:description" content="匿名チャットアプリ「野良トーク」を配信中、ARメジャー「ロック画面メジャー」も近日公開。個人開発アプリの紹介サイトです。">
   <meta property="og:url" content="https://k3e8.github.io/">
   <meta property="og:image" content="https://k3e8.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233ec46d'/%3E%3Cstop offset='1' stop-color='%233b9ae8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial' font-weight='bold' font-size='34' fill='white' text-anchor='middle'%3EK3%3C/text%3E%3C/svg%3E">
   <!-- ?v= はキャッシュ対策のバージョン。CSS/JSを変更したら数字を上げる -->
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 
   <script type="application/ld+json">
   {
@@ -37,6 +37,12 @@
         "applicationCategory": "SocialNetworkingApplication",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
         "url": "https://apps.apple.com/jp/app/id6766537702"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ロック画面メジャー",
+        "operatingSystem": "iOS",
+        "applicationCategory": "UtilitiesApplication"
       }
     ]
   }
@@ -129,6 +135,40 @@
     </a>
   </section>
 
+  <!-- ============ ロック画面メジャー(近日公開) ============ -->
+  <section class="hero-app hero-app--alt">
+    <div class="hero-copy">
+      <div class="hero-brand">
+        <img class="app-icon" src="assets/img/locklens/icon-512.png" width="56" height="56" alt="ロック画面メジャーのアイコン">
+        <div>
+          <p class="hero-appname">ロック画面メジャー <span class="tag-soon">近日公開</span></p>
+          <p class="hero-genre">ARメジャー</p>
+        </div>
+      </div>
+      <h2>ロックを解除せずに、<br><span class="accent">3秒で採寸。</span></h2>
+      <p class="hero-desc">
+        iPhoneのロック画面から1タップで起動するARメジャー。家具の買い物、引っ越しの搬入確認、フリマ出品の採寸——「あとで測ろう」をなくすためのメジャーです。LiDARスキャナ搭載の対応機種なら自動採寸も。計測結果を開発者のサーバーへ送信しません。
+      </p>
+      <ul class="feature-chips" aria-label="特徴">
+        <li>ロック画面から3秒</li>
+        <li>押して、動かして、離すだけ</li>
+        <li>自動採寸(LiDAR対応機種)</li>
+        <li>登録不要・サーバー送信なし</li>
+      </ul>
+      <div class="store-row">
+        <span class="soon-pill">App Storeで近日公開</span>
+        <a class="x-btn" href="https://x.com/K3E8_dev" target="_blank" rel="noopener" title="続報はXでお知らせ">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3L17.6 20.65Z"/></svg>
+          <span>続報はX</span>
+        </a>
+      </div>
+      <p class="fine-note">※計測値は目安です。iPhone(iOS 18以降)専用。</p>
+    </div>
+    <div class="hero-media">
+      <img class="phone-shot" src="assets/img/locklens/ss01.png" width="382" height="830" alt="ロック画面メジャー: ロック画面から起動して額縁を採寸している画面" loading="lazy">
+    </div>
+  </section>
+
   <!-- ============ つくったもの ============ -->
   <div class="wave" aria-hidden="true">
     <svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C180,52 360,6 540,20 C720,34 900,54 1080,40 C1260,26 1350,10 1440,24 L1440,56 L0,56 Z"/></svg>
@@ -146,12 +186,12 @@
             <span class="app-genre">Anonymous Chat</span>
           </div>
         </a>
-        <div class="app-card app-card--soon reveal" aria-label="開発中のアプリ">
-          <div class="soon-icon" aria-hidden="true">?</div>
+        <div class="app-card reveal" aria-label="近日公開のアプリ">
+          <img class="app-icon" src="assets/img/locklens/icon-512.png" width="56" height="56" alt="" loading="lazy">
           <div>
-            <h3>NEXT APP</h3>
-            <p>次のアプリを開発中。続報は <a href="https://x.com/K3E8_dev" target="_blank" rel="noopener">X</a> でお知らせします</p>
-            <span class="app-genre">Coming Soon</span>
+            <h3>ロック画面メジャー <span class="tag-soon">近日公開</span></h3>
+            <p>ロック解除なしで3秒採寸できるARメジャー</p>
+            <span class="app-genre">AR Measure</span>
           </div>
         </div>
       </div>
@@ -165,6 +205,7 @@
   <section class="section" id="news">
     <h2 class="section-title">お知らせ</h2>
     <ol class="timeline reveal">
+      <li><time datetime="2026-08-29">2026.08.29</time><p>新作「ロック画面メジャー」を公開準備中です</p></li>
       <li><time datetime="2026-07-04">2026.07.04</time><p>野良トーク v1.0.4 を公開しました</p></li>
       <li><time datetime="2026-06-17">2026.06.17</time><p>野良トーク公式X(<a href="https://x.com/noratalk_app" target="_blank" rel="noopener">@noratalk_app</a>)を開設しました</p></li>
       <li><time datetime="2026-06-09">2026.06.09</time><p>野良トーク iOS版を App Store でリリースしました</p></li>
