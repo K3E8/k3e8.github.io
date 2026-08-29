@@ -14,6 +14,16 @@
 - [x] GitHubリンク: `https://github.com/K3E8` に設定済み
 - [ ] メールアドレス(Contactの `data-u` / `data-d` 属性)。公開用に専用アドレスを作るのも推奨
 
+## アプリ配信用ページの規約(重要 — App Store審査で参照される)
+
+**アプリごとに `/<アプリ名スラッグ>/privacy.html` と `/<アプリ名スラッグ>/support.html` を置く**のがこのサイトの統一規約。
+
+- 例: ロック画面メジャー → `locklens/privacy.html` / `locklens/support.html`(公開済み。App Store Connectに登録済みのURL)
+- 新しいアプリを出すときは `locklens/` の2ファイルをテンプレートとして複製し、内容を書き換える
+- ホームの該当アプリ欄(fine-note)から両ページへリンクする
+- **一度App Store Connectに登録したURLのページは削除・移動しない**(審査・ストア掲載から参照され続ける)
+- 広告や課金を変更したら該当アプリのprivacy.htmlも必ず追随させる
+
 ## 更新のしかた
 
 - **アプリを追加**: 「つくったもの」の `.app-card` をコピーして編集。PICKUPに載せるなら `.pickup-card` を複製
