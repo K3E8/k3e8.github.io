@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>プライバシーポリシー | フォト便</title>
-  <meta name="description" content="フォト便のプライバシーポリシー(準備版)。写真と動画は同じローカルネットワーク上のMacにだけ送り、開発者のサーバーへは送信しません。">
+  <meta name="description" content="フォト便のプライバシーポリシー。写真と動画は同じローカルネットワーク上のMacにだけ送り、開発者のサーバーへは送信しません。">
   <link rel="canonical" href="https://k3e8.github.io/photobin/privacy.html">
   <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c1220" media="(prefers-color-scheme: dark)">
@@ -14,29 +14,84 @@
     .policy h1 { font-size: 1.5rem; margin-bottom: 0.4em; }
     .policy .app-name { opacity: 0.7; font-size: 0.95rem; margin-bottom: 2em; }
     .policy h2 { font-size: 1.1rem; margin: 1.8em 0 0.5em; }
+    .policy p { margin: 0.6em 0; }
     .policy ul { padding-left: 1.3em; }
     .policy li { margin: 0.4em 0; }
     .policy a { text-decoration: underline; text-underline-offset: 2px; }
+    .policy table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin: 0.8em 0; }
+    .policy th, .policy td { border: 1px solid rgba(128,128,128,0.4); padding: 6px 8px; text-align: left; vertical-align: top; }
     .policy .updated { margin-top: 3em; font-size: 0.85rem; opacity: 0.8; }
     .policy a.back { display: inline-block; margin-top: 2.5em; text-decoration: none; }
-    .policy .notice { border: 1px solid rgba(128,128,128,0.4); border-radius: 10px; padding: 12px 16px; font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <main class="policy">
     <h1>プライバシーポリシー</h1>
     <p class="app-name">フォト便(iPhoneアプリ)/ フォト便 受け取り(Macアプリ)</p>
-    <p class="notice">このページは準備中です。アプリの公開に合わせて正式な内容を掲載します。</p>
 
-    <h2>基本方針(要点)</h2>
+    <p>「フォト便」(iPhone アプリ)と「フォト便 受け取り」(Mac アプリ)(以下あわせて「本アプリ」)が扱う情報について定めます。提供者: K3E8(以下「開発者」)。制定日: 2026年10月20日。</p>
+
+    <h2>1. 基本方針</h2>
+    <p>本アプリは、写真・動画を開発者や第三者のサーバーへ送信しません。開発者はデータを受け取るサーバーを運用していません。写真・動画の原本は、利用者が選んだ同じローカルネットワーク上の Mac にだけ送られます。</p>
+
+    <h2>2. 本アプリが扱う情報</h2>
     <ul>
-      <li>写真・動画は、利用者が選んだ同じローカルネットワーク上のMacにだけ送ります。開発者のサーバーへは送信しません</li>
-      <li>転送の進捗・履歴・設定・接続先の情報は、お使いの端末内で扱います</li>
-      <li>iPhoneアプリの無料版は広告(Google Mobile Ads)を表示します。広告はパーソナライズなしで要求します</li>
-      <li>有料プランの購入はApple(App Store)が処理し、開発者は支払い情報を受け取りません</li>
+      <li><strong>写真・動画</strong>: 利用者が選んだ項目を、利用者が許可した Mac アプリへ送信します。送信後の保存先と管理は利用者が行います。iPhone 内の写真を削除することはありません。</li>
+      <li><strong>iPhone に保存する情報</strong>: 転送の進捗・履歴・設定、接続した Mac の名前と識別用の指紋、接続用の認証トークン(iPhone のキーチェーン)、購入状態のキャッシュ、転送済みの判定に使う写真の版情報(写真の識別子と内容の要約値)。いずれも端末内に保存し、開発者へ送りません。</li>
+      <li><strong>Mac に保存する情報</strong>: 受信フォルダの許可情報、受信の台帳、登録した iPhone の端末名と識別情報(認証トークンはハッシュ化して保存)、設定、診断ログ、通信用の秘密鍵(キーチェーン)。診断ログは認証情報やファイルの絶対パスを含めない設計です。開発者へ自動送信しません。利用者が書き出して送る場合に限り、開発者が受け取ります。</li>
     </ul>
 
-    <p class="updated">最終更新: 2026年10月(準備版)</p>
+    <h2>3. 利用する権限(iPhone アプリ)</h2>
+    <ul>
+      <li><strong>写真ライブラリ全体へのアクセス</strong>: 選択した写真・動画の原本を Mac に保存し、転送済みの項目を確認するため。</li>
+      <li><strong>カメラ</strong>: Mac が表示する QR コードを読み取るためだけに使用します。</li>
+      <li><strong>ローカルネットワーク</strong>: 同じネットワーク上の Mac を見つけて直接転送するため。</li>
+    </ul>
+    <p>Mac アプリは、フォルダ選択ダイアログで許可した保存先フォルダへの読み書きと、ローカルネットワークでの受信だけを使います。</p>
+
+    <h2>4. 通信</h2>
+    <p>Mac との通信は同じローカルネットワーク内で行い、暗号化(TLS)し、QR コードで確認した証明書の指紋で接続先を確認します。インターネット通信は、広告の取得、購入状態の確認(App Store)、iCloud 上の原本の取得(OS の機能)で発生する場合があります。</p>
+
+    <h2>5. 広告(iPhone アプリの無料版のみ)</h2>
+    <ul>
+      <li>iPhone アプリの無料版は、Google の広告 SDK(Google Mobile Ads / AdMob)でバナーと全画面広告を表示します。Mac アプリに広告・分析 SDK はありません。</li>
+      <li>広告は「パーソナライズなし」で要求します。広告の内容は、AdMob の設定で G(全ユーザー向け)までに制限しています。</li>
+      <li>広告 SDK は、広告の配信・計測・分析・SDK の診断のため、次の情報を取得することがあります: 端末の識別子、おおよその位置(IP アドレス由来を含む)、広告データ、アプリ内の操作、パフォーマンス・クラッシュ・その他の診断情報。</li>
+      <li>写真、サムネイル、ファイル名、写真の識別子、Mac の情報、端末トークンを広告に渡すことはありません。</li>
+      <li>広告を非表示にする購入をした場合は、広告を読み込みません。</li>
+      <li>Google による情報の取り扱い: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a></li>
+    </ul>
+
+    <h2>6. 外部送信に関する公表</h2>
+    <table>
+      <thead>
+        <tr><th scope="col">送信先</th><th scope="col">送信される情報</th><th scope="col">利用目的</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google LLC(広告 SDK)</td>
+          <td>端末の識別子、おおよその位置(IP アドレス由来)、広告データ、アプリ内の操作、パフォーマンス・クラッシュ・診断情報</td>
+          <td>広告の配信・計測・分析、SDK の診断</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>7. 購入</h2>
+    <p>購入・自動更新・復元は Apple(App Store)が処理します。開発者はクレジットカード等の支払い情報を受け取りません。</p>
+
+    <h2>8. 第三者提供</h2>
+    <p>広告 SDK(上記 5)を除き、法令に基づく場合を除いて、利用者の情報を第三者へ提供しません。</p>
+
+    <h2>9. 保存と削除</h2>
+    <p>iPhone 内の情報はアプリを削除すると消えます。iPhone のキーチェーンに保存した認証トークンはアプリを削除しても残ることがありますが、Mac アプリの「概要」の「登録済み端末」でその iPhone を「失効」すれば使えなくなります。Mac に保存する情報は、Mac アプリとそのアプリデータ(コンテナ)を削除すると消えます(キーチェーンの秘密鍵は残ることがあります)。受信した写真・動画は保存先フォルダに残ります。広告 SDK が取得した情報の保存期間は Google のポリシーに従います。</p>
+
+    <h2>10. 年少者</h2>
+    <p>本アプリは 13 歳未満の子どもを主な対象としていません。</p>
+
+    <h2>11. 変更と連絡先</h2>
+    <p>内容を変更するときは本ページで告知します。お問い合わせ: <a href="mailto:s299792458star@gmail.com">s299792458star@gmail.com</a></p>
+
+    <p class="updated">制定日: 2026年10月20日</p>
     <a class="back" href="../">← K3E8 Apps に戻る</a>
   </main>
 </body>
